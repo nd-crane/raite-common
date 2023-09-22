@@ -43,7 +43,6 @@ class StreamInput(Thread):
             self._latest_frame = frame
             self._latest_timestamp = self._stream.get(cv2.CAP_PROP_POS_MSEC)
 
-        self._stream.close()
         self._stream.release()
 
     def stop(self):

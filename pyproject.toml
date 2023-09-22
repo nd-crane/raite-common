@@ -1,0 +1,14 @@
+[project]
+name = "raite"
+version = "0.0.1"
+description = ""
+authors = [
+    {name = "James Sweet", email = "james.sweet@protonmail.com"},
+]
+dependencies = [
+    "opencv-python>=4.8.0.76",
+]
+requires-python = ">=3.10"
+readme = "README.md"
+license = {text = "MIT"}
+

@@ -8,7 +8,8 @@ Usage:
 import cv2
 from raite.inputs.stream import StreamInput
 
-if __name__ == "__main__":
+
+def main():
     stream_input = StreamInput(location="example.mp4")
 
     stream_input.start()
@@ -30,3 +31,7 @@ if __name__ == "__main__":
 
     # Release OpenCV window
     cv2.destroyAllWindows()
+
+
+if __name__ == "__main__":
+    main()

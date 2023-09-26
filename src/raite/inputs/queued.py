@@ -4,7 +4,7 @@ from threading import Thread
 from typing import Tuple, Union, Any
 
 
-class QueuedStreamInput(Thread):
+class QueuedInput(Thread):
     def __init__(self, location: str, queue_size: int = 10, *args, **kwargs):
         super().__init__(*args, **kwargs)
 

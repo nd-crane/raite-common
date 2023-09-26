@@ -6,7 +6,7 @@ authors = [
     {name = "James Sweet", email = "james.sweet@protonmail.com"},
 ]
 dependencies = [
-    "opencv-python>=4.8.0.76",
+    "vidgear>=0.3.2",
 ]
 requires-python = ">=3.10"
 readme = "README.md"

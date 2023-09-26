@@ -11,7 +11,9 @@ class RTSPOutput(Thread):
         self._timestep = 1.0 / fps
         output_params = {
             "-f": "rtsp",
-            "-rtsp_transport": "tcp"
+            "-rtsp_transport": "tcp",
+            "-r": fps,
+            "-input_framerate": fps
         }
         
         self._stream = WriteGear(
@@ -32,8 +34,8 @@ class RTSPOutput(Thread):
                 self._stream.write(self._latest_frame)
             
             diff = time.time() - start
-            if diff > self._timestep:
-                time.sleep(diff)
+            if diff < self._timestep:
+                time.sleep(self._timestep - diff)
 
         self._stream.close()
 

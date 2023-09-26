@@ -7,13 +7,13 @@ Usage:
 
 import argparse
 
-from raite.inputs.queued import QueuedInput
+from raite.inputs.stream import StreamInput
 from raite.outputs.rtsp import RTSPOutput
 
 
 def main(input_location: str, output_location: str, fps: int):
     # Initialize the StreamInput and RTSPOutput classes
-    stream_input = QueuedInput(input_location)
+    stream_input = StreamInput(input_location)
     rtsp_output = RTSPOutput(output_location, fps=fps)
 
     # Start the threads

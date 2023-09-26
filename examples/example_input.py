@@ -6,7 +6,7 @@ Usage:
 """
 
 import cv2
-from raite.input import StreamInput
+from raite.inputs.stream import StreamInput
 
 if __name__ == "__main__":
     stream_input = StreamInput(location="example.mp4")

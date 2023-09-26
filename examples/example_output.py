@@ -5,7 +5,7 @@ Usage:
     $ python example_output.py
 """
 import numpy as np
-from raite.output import RTSPOutput
+from raite.outputs.rtsp import RTSPOutput
 
 
 def main():

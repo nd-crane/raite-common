@@ -7,13 +7,13 @@ Usage:
 
 import argparse
 
-from raite.input_queued import StreamInput
-from raite.output import RTSPOutput
+from raite.inputs.queued import QueuedInput
+from raite.outputs.rtsp import RTSPOutput
 
 
 def main(input_location: str, output_location: str, fps: int):
     # Initialize the StreamInput and RTSPOutput classes
-    stream_input = StreamInput(input_location)
+    stream_input = QueuedInput(input_location)
     rtsp_output = RTSPOutput(output_location, fps=fps)
 
     # Start the threads
@@ -27,6 +27,7 @@ def main(input_location: str, output_location: str, fps: int):
 
             if latest_frame is not None:
                 _, frame = latest_frame
+                print(frame.shape)
                 # This is where you would perform any processing on the frame.
                 rtsp_output.update(frame)
 

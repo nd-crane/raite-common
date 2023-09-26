@@ -1,14 +1,15 @@
 [project]
 name = "raite"
 version = "0.0.1"
-description = ""
+description = "Common code for the RAITE project."
 authors = [
     {name = "James Sweet", email = "james.sweet@protonmail.com"},
 ]
 dependencies = [
     "opencv-python>=4.8.0.76",
+    "vidgear",
+    "pytest",
 ]
 requires-python = ">=3.10"
 readme = "README.md"
 license = {text = "MIT"}
-

@@ -14,7 +14,7 @@ class StreamInput(Thread):
         self._latest_frame = None
 
         # Initialize Stream
-        self._stream = cv2.VideoCapture(location) 
+        self._stream = cv2.VideoCapture(location)
         if not self._stream.isOpened():
             raise Exception("can't open video writer")
 
@@ -23,13 +23,13 @@ class StreamInput(Thread):
 
     def isOpened(self) -> bool:
         return self._stream.isOpened()
-    
+
     def width(self) -> int:
         return int(self._stream.get(cv2.CAP_PROP_FRAME_WIDTH))
-    
+
     def height(self) -> int:
         return int(self._stream.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    
+
     def latest(self):
         if self._latest_frame is None:
             return (None, None)
